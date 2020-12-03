@@ -1,0 +1,105 @@
+<div >
+  <form [formGroup]="rForm" >
+    <div class="form-container">
+      <div class="row columns">
+        <h1>My Reactive Form</h1>
+
+        <label > Down Payment
+          <input formControlName="downPayment" type="number" placeholder="Down Payment" />
+      </label>
+
+      <label > Down Payment Round
+        <input formControlName="downPaymentRound" type="number" placeholder="Down Payment Round" />
+    </label> 
+
+    <label > Required Area
+      <input formControlName="requiredArea" type="number" placeholder="required Area" />
+  </label>
+
+  <label > Start Round
+    <input formControlName="startRound" type="number" placeholder="startRound" />
+</label>
+
+<label > ENd Round
+  <input formControlName="endRound" type="number" placeholder="End Round" />
+</label>
+        <input type="submit" class="button expanded" value="Submit Form" (click)="submit()" >
+      </div>
+    </div>
+    
+  </form>
+</div>
+
+
+
+<div class="row columns">
+  <h3>Cards Are The Best</h3>
+</div>
+<section class="cards-container">
+  <div class="row large-up-3">
+    <div class="column">
+<div class="card">
+  <div class="card-divider">
+    <h4>downPaymentAreaUnits</h4>
+  </div>
+  <div class="card-section">
+    <p>{{result.downPaymentAreaUnits}}</p>
+  </div>
+  <div class="card-divider">
+    <p></p>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <div class="card-divider">
+      <h4>installmentAreaUnits</h4>
+    </div>
+    <div class="card-section">
+      <p>{{result.installmentAreaUnits}}</p>
+    </div>
+    <div class="card-divider">
+      <p></p>
+    </div>
+  </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-divider">
+        <h4>installmentAreaUnitsPerRound</h4>
+      </div>
+      <div class="card-section">
+        <p>{{result.installmentAreaUnitsPerRound}}</p>
+      </div>
+      <div class="card-divider">
+        <p></p>
+      </div>
+    </div>
+    </div>
+
+</div>
+</section>
+
+
+
+<table class="dataTable">
+  <thead>
+      <tr>
+          <th>Round</th>
+          <th>Area</th>
+          <th>Amount</th>
+      </tr>
+  </thead>
+
+        <tr *ngFor="let item of plan">
+          <td>{{item.roundName}}</td>
+          <td>{{item.AreaUnits}}</td>
+          <td>{{item.Amount}}</td>
+      </tr>
+</table>
+
+
+
+

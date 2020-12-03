@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+
+
+$body_bg: #f1f1f1;
+/*change this values for default color scheme*/
+$table_header_bg: #424959;
+$table_bg: #3b414e;
+$table_active_row_bg: rgba(255,255,255,0.1);
+body {
+    background:#e8e8e8;
+    font-family: 'Muli';
+}
+
+.card{
+    max-width: 300px;
+    color: darksalmon;
+}
+
+table {
+	margin: 2.5%;
+	width: 95%;
+	box-shadow: 0 0 20px rgba(0,0,0,.4);
+	border: 1px solid #116b6a;
+  
+  th, td {
+    padding: 15px;
+    border: 1px solid #116b6a;
+    text-align: center;
+    /*border-left: 0;
+    border-right: 0;*/
+  }
+
+  th {
+    background-color: #199f9d;
+    color: white;
+    font-weight: bold;
+  }
+
+  td {
+    background-color: white;
+
+  }
+}
